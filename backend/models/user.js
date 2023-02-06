@@ -14,10 +14,13 @@ const UserSchema=new mongoose.Schema({
         required:[true,"username is required"],
         unique:true
     },
+    password:{
+        type:String,
+        required:true
+    },
     verified:{
         type:Boolean,
-        default:false,
-        unique:true
+        default:false
     }
 });
 module.exports=mongoose.model("User",UserSchema);
